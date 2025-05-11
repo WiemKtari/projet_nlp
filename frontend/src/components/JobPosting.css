@@ -1,0 +1,174 @@
+/* JobPosting.css */
+
+/* Container Styles */
+.job-posting-container {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(27, 8, 20, 0.175);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Form Header */
+  .form-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-header h3 {
+    font-size: 1.6rem;
+    color: #2d3748;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-header p {
+    color: #718096;
+    font-size: 1rem;
+  }
+  
+  /* Drop Zone */
+  .drop-zone {
+    position: relative;
+    border: 2px dashed #a0aec0;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    background-color: #f9fafb;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+  }
+  
+  .drop-zone:hover {
+    border-color: #d4a6db;
+  }
+  
+  .drop-zone p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Hidden File Input */
+  .file-input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    background-color: #d4a6db !important;
+    color: white !important;
+    border: none !important;
+    padding: 1rem 2rem !important;
+    border-radius: 8px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+  }
+  
+  .submit-btn:hover {
+    background-color: #9a5aa1 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(79, 70, 229, 0.3) !important;
+  }
+  
+  .submit-btn:disabled {
+    background-color: #cbd5e0 !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  
+  
+  /* Spinner */
+  .spinner-btn {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s ease-in-out infinite;
+  }
+  
+  /* Alerts */
+  .success-message,
+  .error-message {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .success-message {
+    background-color: #e6fffa;
+    color: #2c7a7b;
+    border: 1px solid #b2f5ea;
+  }
+  
+  .error-message {
+    background-color: #fff5f5;
+    color: #c53030;
+    border: 1px solid #fed7d7;
+  }
+  
+  /* Spinner Animation */
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .job-posting-container {
+      padding: 1.5rem;
+      border-radius: 12px;
+    }
+  
+    .form-header h3 {
+      font-size: 1.4rem;
+    }
+  
+    .drop-zone {
+      padding: 1.5rem;
+    }
+  
+    .submit-btn {
+      padding: 0.8rem 1.5rem;
+    }
+  }
+  
+.clamp-text {
+  display: -webkit-box;         /* Required for -webkit-line-clamp */
+  -webkit-box-orient: vertical; /* Required for -webkit-line-clamp */
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* Standard syntax (may not yet be fully supported) */
+  line-clamp: 3;
+
+  /* WebKit-specific fallback */
+  -webkit-line-clamp: 3;
+}
+
+  
+  
+  
