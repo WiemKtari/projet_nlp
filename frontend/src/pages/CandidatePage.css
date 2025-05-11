@@ -1,0 +1,62 @@
+/* CandidatePage.css */
+
+/* Conteneur principal de la page */
+.candidate-page {
+    background-color: #f8f8f8;
+    min-height: 100vh;
+    padding: 1.5rem;
+  }
+  
+  /* Conteneur des onglets */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #d451ade8;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Style de chaque bouton */
+  .tabs button {
+    padding: 1rem 2rem;
+    border-radius: 0.375rem; /* Arrondi léger */
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+    color: #C95792; /* Texte des boutons en #C95792 */
+  }
+  
+  /* Style pour le bouton actif */
+  .tabs button.active {
+    background-color: #d4a6db; /* Violet foncé */
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(234, 104, 186, 0.455);
+    transform: scale(1.05);
+  }
+  
+  /* Style pour les boutons inactifs */
+  .tabs button.inactive {
+    background-color: #ffffff;
+    color: #C95792; /* Texte des boutons inactifs en #C95792 */
+    border: 2px solid #c14688; /* Bordure violet */
+  }
+  
+  /* Effet au survol */
+  .tabs button:hover {
+    background-color: #d4a6db; /* Fond au survol en #d4a6db */
+    color: white; /* Changer la couleur du texte au survol */
+    transform: scale(1.05); /* Légère agrandissement au survol */
+  }
+  
+  /* Style pour le contenu */
+  .content {
+    background-color: #ffffff;
+    border-radius: 0.375rem;
+    box-shadow: 0 2px 8px rgba(230, 84, 150, 0.632);
+    padding: 1.5rem;
+  }
+  

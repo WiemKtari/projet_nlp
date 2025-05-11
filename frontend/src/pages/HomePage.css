@@ -1,0 +1,298 @@
+/* HomePage.css */
+.home-page {
+  width: 100%;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('/1.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;        /* Centrage vertical */
+  justify-content: center;    /* Centrage horizontal */
+  margin: 0;
+  padding: 0;
+  text-align: center;         /* Pour éviter que le texte parte à gauche */
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Évite les décalages horizontaux */
+}
+
+
+.hero-content {
+  position: relative;
+  max-width: 1200px;
+  width: 90%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column; /* Empiler les enfants en colonne */
+  align-items: center;     /* Centrage horizontal */
+  justify-content: center; /* Centrage vertical */
+  height: 100%;
+  text-align: center;
+  margin: auto;
+
+}
+
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: white;
+  line-height: 1;
+}
+
+
+.hero-subtitle {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  line-height: 1.2;
+}
+
+.connection-status {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;      /* Les boutons côte à côte */
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary, .btn-secondary {
+  background-color: #d4a6db !important; /* Violet foncé */
+  color: white !important;
+  border: none !important;
+  padding: 1.2rem 3rem !important;
+  font-size: 1.2rem !important;
+  box-shadow: 0 4px 15px rgba(196, 108, 201, 0.792) !important;
+  backdrop-filter: none !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+
+
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  background-color: #9a5aa1 !important; /* Violet plus clair au survol */
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgb(164, 54, 144) !important;
+  box-shadow: 0 10px 25px rgba(189, 14, 116, 0.944);
+
+}
+
+.btn-secondary {
+  background-color: rgba(207, 23, 182, 0.805);
+  color: rgb(206, 44, 155);
+  border: 2px solid rgb(191, 26, 166);
+  backdrop-filter: blur(2px);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(212, 67, 193, 0.971);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(169, 18, 124, 0.867);
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-dot.connected {
+  background-color: #4ade80;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 8px rgba(74, 222, 128, 0.7);
+}
+
+.status-dot.disconnected {
+  background-color: #f87171;
+  box-shadow: 0 0 8px rgba(248, 113, 113, 0.7);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .text-content {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .buttons-container {
+    margin-right: 0;
+    width: 100%;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.8rem;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+}
+
+/* Section générale */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #7C4585;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Présentation rapide */
+.presentation-section {
+  padding: 4rem 2rem;
+  background-color: white;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Fonctionnalités clés */
+.features-section {
+  padding: 4rem 2rem;
+  background-color: #f9f6fb;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  box-shadow: 0 10px 20px rgba(124, 69, 133, 0.2);
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #7C4585;
+}
+
+.feature-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Parcours utilisateur */
+.user-path-section {
+  padding: 4rem 2rem;
+}
+
+.user-paths-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.user-path {
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #f3eaf5;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.user-path.candidate {
+  background-color: #f3eaff;
+}
+
+.user-path.recruiter {
+  background-color: #f9e7ff;
+}
+
+.user-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #7C4585;
+  margin-bottom: 1rem;
+}
+
+.user-list {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.btn-secondary, .btn-primary {
+  padding: 0.8rem 1.6rem;
+  background-color: #7C4585;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-secondary:hover, .btn-primary:hover {
+  background-color: #6a3767;
+}
